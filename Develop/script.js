@@ -4,16 +4,10 @@ var lowerSet = "abcdefghijklmnopqrstuvwxyz";
 var upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numSet = "0123456789";
 var specialSet = "!@#$%^&*";
-var newPassword = [];
-// var password = generatePassword();
-
 
 // Write password to the #password input
 
-
-// make it wait for click //
 generateBtn.addEventListener("click",function () {
-  // function generatePassword() {
     var newPassword = [];
     var passwordLength = prompt("How many characters would you like your password to be? Please eanter a number between 8 and 128");
     var lowCase = confirm("Would you like your password to include lowercase letters?");
@@ -25,7 +19,6 @@ generateBtn.addEventListener("click",function () {
       var specialChars = confirm("Would you like your password to include special characters?");
       console.log(specialChars);
       var passwordSet = "";
-  
   
       if (lowCase) { 
         passwordSet = lowerSet;
@@ -61,8 +54,3 @@ generateBtn.addEventListener("click",function () {
 //   var passwordText = document.querySelector("#password");
 
 //   passwordText.value = password;
-
-
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
