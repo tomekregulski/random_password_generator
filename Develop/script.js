@@ -14,7 +14,7 @@ var newPassword = [];
 // make it wait for click //
 generateBtn.addEventListener("click",function () {
   // function generatePassword() {
-    
+    var newPassword = [];
     var passwordLength = prompt("How many characters would you like your password to be? Please eanter a number between 8 and 128");
     var lowCase = confirm("Would you like your password to include lowercase letters?");
       console.log(lowCase);
@@ -30,7 +30,7 @@ generateBtn.addEventListener("click",function () {
       if (lowCase) { 
         passwordSet = lowerSet;
         // console.log(passwordSet); 
-      };
+      }
   
       if (upCase) {
         passwordSet = passwordSet + upperSet;
@@ -44,20 +44,19 @@ generateBtn.addEventListener("click",function () {
   
       if (specialChars) {
         passwordSet = passwordSet + specialSet;
-      };
-      console.log(passwordSet);
-  
-    for ( var i = 0; i < passwordLength; i++ ) {
+      // console.log(passwordSet);
+      }
+
+      console.log(passwordLength);
+      for ( var i = 0; i < passwordLength; i++ ) {
         newPassword += passwordSet[Math.floor(Math.random() * passwordSet.length)];
     }
   
     console.log(newPassword);
-  
     var passwordText = document.querySelector("#password");
-  
       passwordText.value = newPassword;
-  })
-// Given Code ??
+  });
+// Starter code - figure out how to hook it all up to this
 //   var password = writePassword()
 //   var passwordText = document.querySelector("#password");
 
