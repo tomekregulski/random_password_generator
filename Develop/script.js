@@ -4,10 +4,14 @@ var lowerSet = "abcdefghijklmnopqrstuvwxyz";
 var upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numSet = "0123456789";
 var specialSet = "!@#$%^&*";
-var password = "";
+var newPassword = [];
+var password = generatePassword();
 
+generateBtn.addEventListener("click", generatePassword);
 // Write password to the #password input
-function writePassword() {
+
+// make it wait for click //
+function generatePassword() {
   var passwordLength = prompt("How many characters would you like your password to be? Please eanter a number between 8 and 128");
   console.log(passwordLength);
   var lowCase = confirm("Would you like your password to include lowercase letters?");
@@ -42,20 +46,23 @@ function writePassword() {
   console.log(passwordSet);
 
 for ( var i = 0; i < passwordLength; i++ ) {
-    password += passwordSet[Math.floor(Math.random() * passwordSet.length)];
+    newPassword += passwordSet[Math.floor(Math.random() * passwordSet.length)];
 }
 
-console.log(password);
-// console.log(password);
-  // if (upCase) { console.log("uppercase") };
-  // if (numbers) { console.log("numbers") };
-  // if (specialChars) { console.log("special") };
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+console.log(newPassword);
 
-  passwordText.value = password;
+var passwordText = document.querySelector("#password");
 
-
+  passwordText.value = newPassword;
 }
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+// Given Code ??
+//   var password = writePassword()
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+
+
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
