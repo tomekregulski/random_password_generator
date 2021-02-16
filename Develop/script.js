@@ -22,33 +22,22 @@ function generatePassword() {
 
     if (lowCase) { 
       passwordSet = lowerSet;
-      // console.log(passwordSet); 
     }
-
     if (upCase) {
       passwordSet = passwordSet + upperSet;
-      // console.log(passwordSet);
     }
-
     if (numbers) {
       passwordSet = passwordSet + numSet;
-      // console.log(passwordSet);
     }
-
     if (specialChars) {
       passwordSet = passwordSet + specialSet;
-    // console.log(passwordSet);
     }
-
     console.log(passwordLength);
     for ( var i = 0; i < passwordLength; i++ ) {
       password += passwordSet[Math.floor(Math.random() * passwordSet.length)];
   }
-
   return password;
-
 };
-
 
 function writePassword() {
   var password = generatePassword()
@@ -56,8 +45,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
