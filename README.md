@@ -13,11 +13,29 @@
 
 In this assignment, an employer needed a random password generator that, upon clicking/pressing the button, would allow employees to specify, through a series of prompts, the desired length of their password, as well as whether it would include lower/upper case letters, numbers, and/or special characters. The application would then run a series of functions in JavaScript and display a new password in the browser. 
 
+This page has been deployed on Github, and can be viewed here: https://tomekregulski.github.io/random_password_generator/
+
 # Details
+
+This project features a simple layout with a button that the user can click, and text box that receives no direct user input. The basic function is that the user clicks the button, answers a series of prompts, and receives a randomly-generated password based on their answers to the prompts.
+
+Behind the scenes, an event listener waits to capture a button click, which calls the function writePassword, which in turn calls the function generatePassword.
+
+generatePassword begins a sequence of 5 prompts that record the user's desired length of password, as well as which groups of characters should be included in the generation process. 
+
+Once the prompts have been answered, a string of the selected character sets is stored in the variable passwordSet. The password length is used as the second argument in a "for" loop, and a string of random characters selected from passwordSet is created and stored in the variable password. 
+
+This result is passed back into writePassword, where it is set as the value for the variable passwordText, which in turn is passed to the text field in the HTML, and presented to the user as their new password. 
 
 #What I Learned
 
+Through this exercise, I learned how javascript can accept an input from the user interface, and use that to call the necessary functions to generate and return a desired result. Furthermore, I feel that I have gained a stronger understanding of the proper syntax in javascript, particularly when it comes to working with several variables and functions that rely on thoughtful construction to function properly. 
+
+Finally, I have learned how it can be beneficial to separate out certain functions, even if the task at hand could be written out in one block. Though both can work, keeping things separate results in cleaner code, and allows a particular function to be readily available to be a part of other processes if needed. 
+
 #Installation and Usage
+
+Clone the repo and open the folder in the code editor of your choice. Launch the HTML in the browser of your choice. Click the "Generate Password" button, and follow the prompts in order to receive your password.
 
 # License
 
