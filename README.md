@@ -3,7 +3,7 @@
 * [Abstract](#abstract)
 * [Details ](#details)
 * [What I Learned](#what-i-learned)
-* [Installation and Usage](#installation-and-usa)
+* [Installation and Usage](#installation-and-usage)
 * [License](#license)
 
 ![homepage main](Assets/demo1.png)
