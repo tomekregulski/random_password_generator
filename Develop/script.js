@@ -10,6 +10,9 @@ var specialSet = "!()?[]`~;:!@#$%^&*+=";
 function generatePassword() {
   var password = [];
   var passwordLength = prompt("How many characters would you like your password to be? Please eanter a number between 8 and 128");
+    if (!passwordLength) {
+      return;
+    }
   var lowCase = confirm("Would you like your password to include lowercase letters?");
     console.log(lowCase);
   var upCase = confirm("Would you like your password to include uppercase letters?");
