@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 var lowerSet = "abcdefghijklmnopqrstuvwxyz";
 var upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numSet = "0123456789";
-var specialSet = "!@#$%^&*";
+var specialSet = "!()?[]`~;:!@#$%^&*+=";
 
 
 // Write password to the #password input
