@@ -11,8 +11,26 @@ function generatePassword() {
   var password = [];
   var passwordLength = prompt("How many characters would you like your password to be? Please eanter a number between 8 and 128");
     if (!passwordLength) {
-      return;
+      return ("");
     }
+    if (passwordLength < 8 || passwordLength > 128) {
+      alert("Please choose a password length between 8 and 128 characters.")
+      var tryAgain = confirm("Would you like to try again?");
+      if (tryAgain) {
+        generatePassword();
+      } else {
+        return ("");
+      }
+    }
+    if (isNaN(parseInt(passwordLength))) {
+      alert("Please only enter a numerical value");
+      var tryAgain = confirm("Would you like to try again?");
+      if (tryAgain) {
+        generatePassword();
+      } else {
+        return ("");
+      }
+    } 
   var lowCase = confirm("Would you like your password to include lowercase letters?");
     console.log(lowCase);
   var upCase = confirm("Would you like your password to include uppercase letters?");
