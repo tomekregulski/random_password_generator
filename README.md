@@ -27,7 +27,7 @@ Once the prompts have been answered, a string of the selected character sets is 
 
 This result is passed back into writePassword, where it is set as the value for the variable passwordText, which in turn is passed to the text field in the HTML, and presented to the user as their new password. 
 
-In addition to the above, I included a line of code that allows the user to cancel the process on the first prompt. In this case, they simply press cancel, and the process terminates. If they want to start it again, they simply have to press the button once more. 
+In addition to the above, I included a code that allows the user to cancel the process on the first prompt. In this case, they simply press cancel, and the process terminates. If they want to start it again, they simply have to press the button once more. This first prompt is also able to catch invalid input, such letter, and numbers outside the range of 8-128, and offer the user a chance to either start again or cancel the process. 
 
 # What I Learned
 
