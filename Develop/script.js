@@ -48,17 +48,19 @@ function generatePassword() {
       for ( var i = 0; i < passwordLength; i++ ) {
         password += passwordSet[Math.floor(Math.random() * passwordSet.length)];
     }
-    return password;
+    // return password;
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
  }
 };
 
-function writePassword() {
-  var password = generatePassword()
+// function writePassword() {
+//   var password = generatePassword()
   
-  var passwordText = document.querySelector("#password");
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-};
+//   passwordText.value = password;
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
