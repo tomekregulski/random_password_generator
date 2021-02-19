@@ -44,6 +44,11 @@ function generatePassword() {
       if (specialChars) {
         passwordSet = passwordSet + specialSet;
       }
+
+      if (passwordSet === "" ) {
+        alert("You must select at least one character set.")
+        return ("");
+      } else {
       console.log(passwordLength);
       for ( var i = 0; i < passwordLength; i++ ) {
         password += passwordSet[Math.floor(Math.random() * passwordSet.length)];
@@ -53,6 +58,7 @@ function generatePassword() {
 
     passwordText.value = password;
  }
+}
 };
 
 // function writePassword() {
